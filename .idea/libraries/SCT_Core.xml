@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="SCT_Core">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../Java-API/SCT_Core.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
