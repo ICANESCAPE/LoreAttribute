@@ -1,0 +1,26 @@
+MaxExp: 1000
+confirm: 'confirm'
+
+Drawing:
+  #图纸名字，GUI标题
+  干将:
+    #展示在选择界面的图标
+    icon: '干将'
+    #从SCT_Core内读取,这是展示在GUI内的道具样子
+    item: 'test'
+    #Gui展示框内出现的位置
+    slot: 0
+    #锻造所需要的EXP
+    exp: 10
+    #锻造成功增加经验
+    add: 50
+    #锻造图纸所需的道具
+    require:
+      - 'tool1'
+      - 'tool2'
+    #锻造成功后的奖励
+    reward:
+      - 'sctitem give %player% ganjiang'
+      - 'say 233'
+
+

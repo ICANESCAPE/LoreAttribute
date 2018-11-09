@@ -1,0 +1,11 @@
+name: LoreAttribute
+main: org.sct.fv.loreattribute.LoreAttribute
+version: 1.0
+depend:
+- SCT_Core
+softdepend:
+- PlaceholderAPI
+commands:
+  la:
+    description: LoreAttribute command
+    aliases: [la]

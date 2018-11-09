@@ -1,0 +1,11 @@
+DropChance: 80
+
+Diamond:
+  1:
+    chance: 90
+    name: tool
+
+Emerald:
+  1:
+    chance: 10
+    name: tool

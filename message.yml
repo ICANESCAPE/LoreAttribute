@@ -1,0 +1,20 @@
+Message:
+  MonitForgeExp: "&f[&c行为记录&f] 玩家 &e%player% &f的锻造经验增加了 &e%amount%"
+  ValueInfo: '&c玩家 &6&l%player% &c进入游戏，战力超过 &6&l%value% &c注意！'
+  PunchedTitle: "&e装备符文: "
+  PunchSuccess: "&a恭喜你成功给 %item% 打孔"
+  NoPunchedLore: "&c没有指定的打孔Lore"
+  NotRune: '&c这个物品不是符文'
+  RuneSuccess: '&a成功给 %item% 镶嵌了 %rune% 符文'
+  DropItem: "&a你在挖 %block% 的时候挖到了一个道具"
+  NotCorrectMaterial: '&c放入物品材料不对'
+  ForgeSuccess: '&a锻造成功'
+  ForgeExpNotEnough: "&a你的锻造经验只有 %old%, 锻造这个需要 %require% 点"
+  ForgeExpMax: "&c你锻造等级已经达到满级了，不再增加经验"
+  ForgeExpAdd: "&a恭喜你锻造经验增加了"
+  DurWarn: "&c警告！你的物品耐久过低，还剩下 %left% 点耐久"
+  SecKill: "&a你触发了秒杀技能"
+  Dodge: "&a你闪避了一次攻击"
+  RealAttack: "&a你打出了真实伤害"
+  AddPoint: "&a玩家 %player% 收到了 %amount% 锻造经验"
+  CheckAttr: "&7==========&f[&a玩家属性&f]&7=========="

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LoreAttribute">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../服务端/plugins/LoreAttribute.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LoreAttribute">
+    <output-path>$PROJECT_DIR$/../../服务端/plugins</output-path>
+    <root id="archive" name="LoreAttribute.jar">
+      <element id="module-output" name="LoreAttribute" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/forge.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/itemdrop.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/message.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/rune.yml" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Expansion-ForgeVariable">
+    <output-path>$PROJECT_DIR$/../..</output-path>
+    <root id="archive" name="Expansion-ForgeVariable.jar">
+      <element id="module-output" name="LoreAttribute" />
+    </root>
+  </artifact>
+</component>

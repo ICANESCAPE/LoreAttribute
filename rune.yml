@@ -1,0 +1,8 @@
+#从SCT_Item里面读取
+Punch: 'punch'
+PunchedLore: '&7已打孔'
+
+RuneSetting:
+  1:
+    name: 'fuwen1'
+    lore: '&7附加攻击+10'
