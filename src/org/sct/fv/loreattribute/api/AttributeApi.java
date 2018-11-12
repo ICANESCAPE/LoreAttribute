@@ -55,10 +55,6 @@ public class AttributeApi {
                         break;
                     case HIT:
                         attribute.setHit(attribute.getHit() + MethodsUtil.getInt(lores.get(i)));
-                        break;
-                  //  case LUCK:
-                    //    attribute.setLuck(attribute.getLuck() + MethodsUtil.getInt(lores.get(i)));
-                      //  break;
                     case UNBREAK:
                         attribute.setUnbreak(true);
                         break;

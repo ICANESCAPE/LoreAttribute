@@ -35,7 +35,6 @@ public class EntityDamageByEntityListner implements Listener {
             Attribute DamagerAttribute = AttributeApi.calcutePlayerAttribute(damager);
             Attribute PlayerAttribute = AttributeApi.getEntityEquipMentAttribute(entity);
             //是否命中，没有命中就GG
-          //
             //  e.setCancelled(MethodsUtil.isHit(DamagerAttribute));
             //是否被闪避，闪避就取消Event
             if(MethodsUtil.isDodge(PlayerAttribute)) {
