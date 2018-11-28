@@ -1,10 +1,9 @@
 package org.sct.fv.loreattribute.util;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.sct.core.Core;
+
 import org.sct.fv.loreattribute.dto.AttributeType;
 import org.sct.fv.loreattribute.file.Config;
 

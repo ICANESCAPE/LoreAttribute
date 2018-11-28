@@ -21,14 +21,12 @@ public class ItemDamageListener implements Listener {
 
     @EventHandler
     public void onDamage(PlayerItemDamageEvent e) {
-        Player player = e.getPlayer();
+      /*  Player player = e.getPlayer();
         ItemStack item = e.getItem();
         Attribute attribute = AttributeApi.getAttributeFromItem(item);
-        /* 非耐Lore耐久物品就不计算*/
-        if(attribute.getDurability() == 0 && item != null || !item.getItemMeta().equals(Material.AIR)) {
-            ItemStackUtil.TakePlayerItem(player, item);
-            player.sendMessage("你东西呗拿走了" +
-                    "");
+        /* 非耐Lore耐久物品就不计算
+        if(attribute.getDurability() == 0 && item != null && !item.getItemMeta().equals(Material.AIR)) {
+           // ItemStackUtil.TakePlayerItem(player, item);
         } else {
             e.setDamage(0);
             String lore = Config.getDurability() + attribute.getDurability();
@@ -42,9 +40,9 @@ public class ItemDamageListener implements Listener {
             }
         }
 
-        /* 有无限耐久表示就不计算 */
+        /* 有无限耐久表示就不计算
         if(attribute.isUnbreak()) {
             e.setDamage(0);
-        }
+        }*/
     }
 }

@@ -37,11 +37,7 @@ public enum AttributeType {
     CRITICAL(Config.getCritical(), true),
     POSION(Config.getPosion(), true),
     SECKILL(Config.getSeckill(), true),
-    HIT(Config.getHit(), true),
-    ICY(Config.getIcy(), true),
-    FIRE(Config.getFire(),true);
-
-
+    ICY(Config.getIcy(), true);
 
     String name;
     boolean percent;

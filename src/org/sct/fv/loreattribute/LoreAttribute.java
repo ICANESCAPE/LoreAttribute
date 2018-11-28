@@ -2,6 +2,7 @@ package org.sct.fv.loreattribute;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
 import org.sct.core.Core;
 import org.sct.fv.loreattribute.command.CommandHandler;
 import org.sct.fv.loreattribute.dao.BasicDao;
@@ -58,9 +59,10 @@ public class LoreAttribute extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        if (!BasicDao.isClose()) {
+
+       /* if (!BasicDao.isClose()) {
             BasicDao.close();
-        }
+        }*/
         Core.info(BasicUtil.getMessage("&c插件卸载完成，感谢使用SCT的插件"));
     }
 
