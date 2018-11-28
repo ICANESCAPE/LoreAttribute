@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockDamageEvent;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.inventory.ItemStack;
+import org.sct.core.Core;
 import org.sct.core.util.EntityUtil;
 import org.sct.core.util.ItemStackUtil;
 import org.sct.core.util.NBTUtil;
@@ -17,32 +18,44 @@ import org.sct.fv.loreattribute.file.Config;
 import org.sct.fv.loreattribute.file.Message;
 import org.sct.fv.loreattribute.util.BasicUtil;
 
+import java.util.List;
+
 public class ItemDamageListener implements Listener {
 
     @EventHandler
     public void onDamage(PlayerItemDamageEvent e) {
-      /*  Player player = e.getPlayer();
+        Player player = e.getPlayer();
         ItemStack item = e.getItem();
         Attribute attribute = AttributeApi.getAttributeFromItem(item);
-        /* 非耐Lore耐久物品就不计算
-        if(attribute.getDurability() == 0 && item != null && !item.getItemMeta().equals(Material.AIR)) {
-           // ItemStackUtil.TakePlayerItem(player, item);
-        } else {
+        List<String> lores = item.getItemMeta().getLore();
+
+        if (item == null || item == null || item.getItemMeta().equals(Material.AIR) || attribute == null) {
+            Core.info("&c为Null");
+            return;
+        }
+        /* 如果带有无限耐久表示则不会损耗 */
+        if (attribute.isUnbreak()) {
             e.setDamage(0);
-            String lore = Config.getDurability() + attribute.getDurability();
-            player.sendMessage(""+player.getInventory().getItemInMainHand().getItemMeta().getLore().equals(lore));
-            player.sendMessage(lore);
-            String new_lore = Config.getDurability() + (attribute.getDurability() - Config.getDurDrop());
-            player.sendMessage(new_lore);
-            player.getInventory().setItemInMainHand(ItemStackUtil.replaceLore(item, lore, new_lore));
-            if(attribute.getDurability() <= Config.getDurWarn()) {
-                player.sendMessage(BasicUtil.getMessage(Message.getDurWarn()).replace("%left%", "" + attribute.getDurability()));
-            }
         }
 
-        /* 有无限耐久表示就不计算
-        if(attribute.isUnbreak()) {
+        /* 如果没有这行Lore(attribute属性为0) 则不管 */
+        if (attribute.getDurability() == 0) {
+            return;
+        } else if (attribute.getDurability() > 0) {
             e.setDamage(0);
-        }*/
+            int line = ItemStackUtil.getLoreIndex(lores, BasicUtil.removeColor(Config.getDurability()));
+            int dur = attribute.getDurability() - Config.getDurDrop();
+            item = ItemStackUtil.setLore(item, line, (Config.getDurability() + dur));
+            /* 每一次损耗重新进入事件，所以attribute数值不需要额外计算 */
+            player.getInventory().setItemInMainHand(item);
+            if (attribute.getDurability() <= Config.getDurWarn()) {
+                player.sendMessage(BasicUtil.getMessage(Message.getDurWarn().replace("%left%", String.valueOf(dur))));
+            }
+            /* 如果dur为0，耐久损耗完了，清空物品 */
+            if (dur == 0) {
+                ItemStackUtil.TakePlayerItem(player, item);
+                player.sendMessage(BasicUtil.getMessage(Message.getDurZero()));
+            }
+        }
     }
 }

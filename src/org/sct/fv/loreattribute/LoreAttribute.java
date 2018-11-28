@@ -67,4 +67,5 @@ public class LoreAttribute extends JavaPlugin {
     }
 
     public static LoreAttribute getInstance() { return Instance; }
+
 }

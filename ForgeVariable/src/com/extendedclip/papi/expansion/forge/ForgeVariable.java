@@ -37,7 +37,7 @@ public class ForgeVariable extends PlaceholderExpansion {
         if (player == null) {
             return "";
         }
-        if (identifier.equals("exp")) {
+        if ("exp".equals(identifier)) {
             return String.valueOf(ForgeApi.getExp(player.getName()));
         }
         return null;

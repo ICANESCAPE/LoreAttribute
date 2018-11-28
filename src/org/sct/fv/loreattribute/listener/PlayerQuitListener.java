@@ -11,7 +11,7 @@ public class PlayerQuitListener implements Listener {
     @EventHandler
     public void onLeave(PlayerQuitEvent e) {
         Player player = e.getPlayer();
-        //如果玩家存在在列表里，把他从缓存Map里干掉
+        /*如果玩家存在在列表里，把他从缓存Map里干掉*/
         if(CacheDao.getPlayerAttribute(player.getName()) != null) {
             CacheDao.deletePlayerData(player);
         }

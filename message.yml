@@ -13,6 +13,7 @@ Message:
   ForgeExpMax: "&c你锻造等级已经达到满级了，不再增加经验"
   ForgeExpAdd: "&a恭喜你锻造经验增加了"
   DurWarn: "&c警告！你的物品耐久过低，还剩下 %left% 点耐久"
+  DurZero: "&c你的物品耐久为0，物品被清空"
   SecKill: "&a你触发了秒杀技能"
   Dodge: "&a你闪避了一次攻击"
   RealAttack: "&a你打出了真实伤害"

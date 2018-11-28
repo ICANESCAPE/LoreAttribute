@@ -19,7 +19,7 @@ public class CheckCommand implements SubCommandUtil {
 
         Player player = (Player) sender;
         Attribute attribute = AttributeApi.calcutePlayerAttribute(player);
-        if(attribute != null) {
+        if (attribute != null) {
             player.sendMessage(BasicUtil.getMessage(Message.getCheckAttr()));
             player.sendMessage(BasicUtil.getMessage(Config.getCritical()) + attribute.getCritical());
             player.sendMessage(BasicUtil.getMessage(Config.getDamage()) + attribute.getDamage());

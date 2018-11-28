@@ -29,6 +29,7 @@ public class Message extends FileUtil {
     public static String getForgeExpMax() { return message.getString("Message.ForgeExpMax"); }
     public static String getForgeExpAdd() { return message.getString("Message.ForgeExpAdd"); }
     public static String getDurWarn() { return message.getString("Message.DurWarn"); }
+    public static String getDurZero() { return message.getString("Message.DurZero"); }
     public static String getSecKill() { return message.getString("Message.SecKill"); }
     public static String getDodge() { return message.getString("Message.Dodge"); }
     public static String getDodged() { return message.getString("Message.Dodged"); }

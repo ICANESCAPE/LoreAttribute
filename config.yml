@@ -24,10 +24,6 @@ Attribute:
 Setting:
   #当战力值超过500的时候进服会全服通告
   ValueNotice: 500
-  #基础命中概率
-  Hitpercent: 10
-  #幸运值的浮动范围
-  Luckrange: 10
   #每次使用物品掉落多少自定义耐久
   DurDrop: 1
   #设置还剩多少耐久的时候发出警告
